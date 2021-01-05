@@ -25,7 +25,7 @@ public class SpringEvaluationApp {
                 && (credentials.getPassword().equals(passwordIn))){
             int i=0;
            while(i==0){
-                System.out.println("************************************");
+                System.out.println("***************** Menu *******************");
                 System.out.println("1. Students List");
                 System.out.println("2. Top 5 students list");
                 System.out.println("3. Logout");

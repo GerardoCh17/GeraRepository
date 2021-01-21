@@ -7,7 +7,7 @@ pipeline{
                 //here goes the scritp that actually execute some cooment on the jenkins server...for example:
                 //sh 'np install' // if we are working with JavaScrpt application
                 //sh 'np build'
-                sh ''ruby -v
+                rvm list
             }
         }
         stage("test"){

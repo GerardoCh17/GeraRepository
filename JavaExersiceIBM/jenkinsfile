@@ -7,7 +7,7 @@ pipeline {
         stage('Preparing-git-Process') {
             steps {
                 echo "We are looking for ${params.processName} process."
-                sh "ps -ef | grep ${params.processName}"
+                sh "ps -ef | grep jruby"
             }
         }
     }

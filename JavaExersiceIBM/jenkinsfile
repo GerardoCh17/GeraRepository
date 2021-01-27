@@ -1,13 +1,14 @@
 pipeline {
     agent any
      parameters {
-        string(name: 'processName', defaultValue:'', description: 'Name of the process that we need it ID.')
+        string(name: 'processID', defaultValue:'', description: 'ID of the process that we need to kill.')
     }
     stages {
         stage('Preparing-git-Process') {
             steps {
-                echo "We are looking for ${params.processName} process."
-                sh "ps -ef | grep ${params.processName}"
+                echo "Killing process ${params.processID}."
+                sh "ps -ef | grep jruby"
+                sh "kill -9 ${params.processID}"
             }
         }
     }
